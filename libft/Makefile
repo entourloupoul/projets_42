@@ -6,12 +6,12 @@
 #    By: pmasson <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/14 14:39:35 by pmasson           #+#    #+#              #
-#    Updated: 2018/11/14 15:41:20 by pmasson          ###   ########.fr        #
+#    Updated: 2018/11/22 16:37:48 by pmasson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = t_putchar.c ft_strlen.c ft_strcmp.c ft_strdup.c\
+SRC = ft_putchar.c ft_strlen.c ft_strcmp.c ft_strdup.c\
 	  ft_putstr.c ft_putendl.c ft_itoa.c ft_putnbr.c\
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 	  ft_putnbr_fd.c ft_memset.c ft_bzero.c ft_strcpy.c\
@@ -26,7 +26,8 @@ SRC = t_putchar.c ft_strlen.c ft_strcmp.c ft_strdup.c\
 	  ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c\
 	  ft_strtrim.c ft_strsplit.c ft_print_table.c ft_memccpy.c\
 	  ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
-	  ft_lstiter.c ft_lstmap.c ft_convert_base.c ft_lstappend.c
+	  ft_lstiter.c ft_lstmap.c ft_convert_base.c ft_lstappend.c\
+	  ft_abs.c
 OBJS = $(patsubst %.c,%.o,$(wildcard $(SRC)))
 HEADER = includes
 CC = gcc
