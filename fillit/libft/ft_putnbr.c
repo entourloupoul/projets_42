@@ -15,11 +15,9 @@
 
 void	ft_putnbr(int n)
 {
-	int		i;
 	int		a;
 	char	c;
 
-	i = 0;
 	a = 1000000000;
 	if (n == -2147483648)
 	{
