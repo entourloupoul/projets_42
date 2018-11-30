@@ -6,7 +6,7 @@
 #    By: pmasson <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/14 14:39:35 by pmasson           #+#    #+#              #
-#    Updated: 2018/11/22 16:37:48 by pmasson          ###   ########.fr        #
+#    Updated: 2018/11/30 11:40:13 by pmasson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC = ft_putchar.c ft_strlen.c ft_strcmp.c ft_strdup.c\
 	  ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
 	  ft_lstiter.c ft_lstmap.c ft_convert_base.c ft_lstappend.c\
 	  ft_abs.c
-OBJS = $(patsubst %.c,%.o,$(wildcard $(SRC)))
+OBJS = $(SRC:%.c=%.o)
 HEADER = includes
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
