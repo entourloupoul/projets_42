@@ -6,7 +6,7 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 10:15:46 by pmasson           #+#    #+#             */
-/*   Updated: 2018/11/14 15:42:14 by pmasson          ###   ########.fr       */
+/*   Updated: 2018/12/05 10:17:36 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int			ft_atoi(const char *str)
 		k++;
 	if (k != 0)
 		res = ft_convert(str, i, k - 1);
-	if (str[i - 1] == '-')
+	if (i - 1 >= 0 && str[i - 1] == '-')
 		res = -res;
 	return (res);
 }
