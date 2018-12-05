@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_ltoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 09:25:10 by pmasson           #+#    #+#             */
-/*   Updated: 2018/12/05 12:52:42 by pmasson          ###   ########.fr       */
+/*   Created: 2018/12/05 12:51:07 by pmasson           #+#    #+#             */
+/*   Updated: 2018/12/05 12:54:45 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,12 @@ static int	ft_len_str(long n1)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char		*ft_ltoa(long n)
 {
 	char	*str;
-	long	n1;
 	int		len;
 
-	n1 = (long)n;
-	len = ft_len_str(n1);
+	len = ft_len_str(n);
 	if (!(str = (char *)malloc(sizeof(char) * len)))
 		return (NULL);
 	if (n == 0)
@@ -67,6 +65,6 @@ char		*ft_itoa(int n)
 		str[1] = '\0';
 		return (str);
 	}
-	ft_fill_str(str, n1, len);
+	ft_fill_str(str, n, len);
 	return (str);
 }
