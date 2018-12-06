@@ -6,7 +6,7 @@
 #    By: pmasson <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/14 14:39:35 by pmasson           #+#    #+#              #
-#    Updated: 2018/12/05 12:53:47 by pmasson          ###   ########.fr        #
+#    Updated: 2018/12/06 13:06:31 by pmasson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC = ft_putchar.c ft_strlen.c ft_strcmp.c ft_strdup.c\
 	  ft_strtrim.c ft_strsplit.c ft_print_table.c ft_memccpy.c\
 	  ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
 	  ft_lstiter.c ft_lstmap.c ft_convert_base.c ft_lstappend.c\
-	  ft_abs.c ft_ltoa.c
+	  ft_abs.c ft_ltoa.c ft_lltoa_no_signe.c ft_ulltoa.c
 OBJS = $(SRC:%.c=%.o)
 HEADER = includes
 CC = gcc
