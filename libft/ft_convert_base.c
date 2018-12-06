@@ -6,7 +6,7 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:58:05 by pmasson           #+#    #+#             */
-/*   Updated: 2018/11/29 16:55:57 by pmasson          ###   ########.fr       */
+/*   Updated: 2018/12/06 15:48:47 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,11 @@ static int				ft_valid_input(const char *base, char *str)
 
 static unsigned long	ft_basetol(const char *base, char *str)
 {
-	unsigned long	n;
-	unsigned long	ret;
-	long			i;
-	unsigned long	j;
-	unsigned long	k;
+	unsigned long		n;
+	unsigned long long	ret;
+	long				i;
+	unsigned long		j;
+	unsigned long		k;
 
 	k = ft_strlen(base);
 	i = (long)ft_strlen(str) - 1;
@@ -82,40 +82,39 @@ static unsigned long	ft_basetol(const char *base, char *str)
 	return (ret);
 }
 
-static char				*ft_ltobase(const char *base, unsigned long n)
+static char				*ft_ltobase(const char *base, unsigned long long n)
 {
-	long			k;
-	unsigned long	b;
-	int				i;
-	char			*new;
+	unsigned long long	k;
+	unsigned long		b;
+	int					i;
+	char				*new;
 
 	b = ft_strlen(base);
-	k = b;
-	i = 1;
-	while (n / k >= b)
-	{
-		k = b * k;
-		i++;
-	}
-	if (!(new = (char *)malloc(sizeof(char) * (i + 2))))
-		return (NULL);
+	k = n;
 	i = 0;
-	while (k > 0)
+	while (n / b > 0)
 	{
-		new[i] = base[n / k];
-		n = n % k;
-		k = k / b;
+		n = n / b;
 		i++;
 	}
+	i++;
+	if (!(new = (char *)malloc(sizeof(char) * (i))))
+		return (NULL);
 	new[i] = '\0';
+	while (i > 0)
+	{
+		i--;
+		new[i] = base[k % b];
+		k = k / b;
+	}
 	return (new);
 }
 
 char					*ft_convert_base(const char *base1,\
 		const char *base2, char *str)
 {
-	char			*ret;
-	unsigned long	l;
+	char				*ret;
+	unsigned long long	l;
 
 	if (ft_valid_base(base1) == 0)
 	{
@@ -129,7 +128,6 @@ char					*ft_convert_base(const char *base1,\
 	}
 	if (ft_valid_input(base1, str) == 0)
 	{
-		ft_putstr("Input is not valid in base 1.\n");
 		return (NULL);
 	}
 	l = ft_basetol(base1, str);
