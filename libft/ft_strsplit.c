@@ -6,7 +6,7 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:25:56 by pmasson           #+#    #+#             */
-/*   Updated: 2018/11/12 15:18:04 by pmasson          ###   ########.fr       */
+/*   Updated: 2019/01/09 14:24:50 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,19 @@ static void	ft_strsplit_fill(char const *s, char c, char **new)
 	new[k] = NULL;
 }
 
+static void	ft_strsplit_free_tab(char ***tab)
+{
+	int i;
+
+	i = 0;
+	while ((*tab)[i] != NULL)
+	{
+		free((*tab)[i]);
+		i++;
+	}
+	free(*tab);
+}
+
 char		**ft_strsplit(char const *s, char c)
 {
 	char	**new;
@@ -99,9 +112,10 @@ char		**ft_strsplit(char const *s, char c)
 	if (!(new = (char **)malloc(sizeof(char **) * (k + 1))))
 		return (NULL);
 	if (!(ft_strsplit_mallocwords(s, c, new)))
+	{
+		ft_strsplit_free_tab(&new);
 		return (NULL);
-	if (!(new[k] = (char *)malloc(sizeof(char) * 1)))
-		return (NULL);
+	}
 	ft_strsplit_fill(s, c, new);
 	return (new);
 }
