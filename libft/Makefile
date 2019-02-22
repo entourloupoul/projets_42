@@ -6,7 +6,7 @@
 #    By: pmasson <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/14 14:39:35 by pmasson           #+#    #+#              #
-#    Updated: 2019/02/22 13:10:13 by pmasson          ###   ########.fr        #
+#    Updated: 2019/02/22 14:21:15 by pmasson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,3 +70,4 @@ delsav	:
 reset	:	fclean delsav
 			rm -rf objs/
 
+.PHONY	:	clean fclean re delsav reset
