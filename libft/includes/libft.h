@@ -6,7 +6,7 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 16:58:45 by pmasson           #+#    #+#             */
-/*   Updated: 2018/12/06 13:07:03 by pmasson          ###   ########.fr       */
+/*   Updated: 2019/02/25 13:58:47 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,5 @@ char			*ft_convert_base(const char *base1,\
 		const char *base2, char *str);
 void			ft_lstappend(t_list **alst, t_list *new);
 int				ft_abs(int a);
+int				ft_msg_int(int fd, char *msg, int ret);
 #endif
