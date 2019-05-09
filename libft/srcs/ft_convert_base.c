@@ -6,7 +6,7 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:58:05 by pmasson           #+#    #+#             */
-/*   Updated: 2019/02/22 11:30:20 by pmasson          ###   ########.fr       */
+/*   Updated: 2019/05/09 14:48:03 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ static char				*ft_ltobase(const char *base, unsigned long long n)
 		i++;
 	}
 	i++;
-	if (!(new = (char *)malloc(sizeof(char) * (i))))
+	if (!(new = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	new[i] = '\0';
 	while (i > 0)
