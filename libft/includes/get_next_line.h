@@ -6,16 +6,13 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:13:01 by pmasson           #+#    #+#             */
-/*   Updated: 2019/02/22 13:14:02 by pmasson          ###   ########.fr       */
+/*   Updated: 2019/06/05 11:22:45 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFF_SIZE 32
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft.h"
+# define BUFF_SIZE 4
 
 typedef	struct	s_fd
 {
