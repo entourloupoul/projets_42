@@ -6,7 +6,7 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 12:47:55 by pmasson           #+#    #+#             */
-/*   Updated: 2019/06/11 12:50:51 by pmasson          ###   ########.fr       */
+/*   Updated: 2019/06/11 12:52:23 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_free_tab_str(char **tab)
 {
 	int	i;
 	
+	if (tab == NULL)
+		return ;
 	i = 0;
 	while (tab[i] != NULL)
 	{
