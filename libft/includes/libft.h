@@ -6,7 +6,7 @@
 /*   By: pmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 16:58:45 by pmasson           #+#    #+#             */
-/*   Updated: 2019/06/11 12:50:02 by pmasson          ###   ########.fr       */
+/*   Updated: 2019/06/18 15:58:29 by pmasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,5 @@ int				ft_abs(int a);
 int				ft_msg_int(int fd, char *msg, int ret);
 int				ft_atoi_modif(char *str, int *d);
 void			ft_free_tab_str(char **tab);
+int				ft_strmadeof(char *str, char *src);
 #endif

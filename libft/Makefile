@@ -6,7 +6,7 @@
 #    By: pmasson <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/11 12:46:07 by pmasson           #+#    #+#              #
-#    Updated: 2019/06/11 12:50:21 by pmasson          ###   ########.fr        #
+#    Updated: 2019/06/18 15:57:55 by pmasson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ SRCS	= 	ft_putchar.c ft_strlen.c ft_strcmp.c ft_strdup.c\
 	  		ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
 	  		ft_lstiter.c ft_lstmap.c ft_convert_base.c ft_lstappend.c\
 	  		ft_abs.c ft_ltoa.c ft_lltoa_no_signe.c ft_ulltoa.c\
-			get_next_line.c ft_msg_int.c ft_atoi_modif.c ft_free_tab_str.c
+			get_next_line.c ft_msg_int.c ft_atoi_modif.c ft_free_tab_str.c\
+			ft_strmadeof.c
 
 OBJS	=	$(addprefix $(OBJSDIR)/, $(SRCS:.c=.o))
 
